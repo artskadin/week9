@@ -17,7 +17,7 @@ export default function appSrc(express, bodyParser, createReadStream, crypto, ht
   app.use(cors());
   app.options('*', cors());
 
-  app.use('/login/', (req, res) => res.send('itmo182954'));
+  app.use('/login/', (req, res) => res.send('artskadin'));
 
   app.use('/code/', (req, res) => {
     let readStream = createReadStream(import.meta.url.substring(7));
@@ -54,7 +54,7 @@ export default function appSrc(express, bodyParser, createReadStream, crypto, ht
   });
 
 
-    app.get('/wordpress/wp-json/wp/v2/posts/1', (req, res) => res.status(200).json({title: {id: 1, rendered: "itmo182954"}}))
+    app.get('/wordpress/wp-json/wp/v2/posts/1', (req, res) => res.status(200).json({title: {id: 1, rendered: "artskadin"}}))
     app.post('/render/', (req, res) => {
       const {random2, random3} = req.body;
 
